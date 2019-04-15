@@ -9,6 +9,9 @@ Personalised configuration files
 ## Terminal
 - [iTerm2](https://www.iterm2.com/)
 
+## Theme
+- [Nord Theme](https://github.com/arcticicestudio/nord)
+
 ## IDEs
 - [IntelliJ](https://www.jetbrains.com/idea/)
 - [IntelliJ Rust](https://intellij-rust.github.io/)
