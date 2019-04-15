@@ -48,6 +48,11 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     brew install ruby
 
     # ===
+    # Rust packages
+    # ===
+    curl https://sh.rustup.rs -sSf | sh
+
+    # ===
     # tmux packages
     # ===
     brew install tmate
@@ -63,4 +68,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     # ===
     brew cask install font-fantasque-sans-mono # Fantasque font
     brew cask install fluor # Switch fn keys depending on app used
+    brew cask install iterm2 # OS Terminal
+    brew install bash-completion
+    (cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc # Sexy-bash-prompt
 fi
