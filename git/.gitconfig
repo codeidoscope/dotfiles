@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = NAME
+	email = EMAIL
+
+[alias]
+  tree = log --graph --all --pretty=format:'%C(magenta)%h%C(auto)%d %C(white)%s %C(green)(%cr) %C(bold blue)%an%C(white)/%C(cyan)%cn'
