@@ -46,6 +46,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 
+" Search
+Plug 'felipesere/search'
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
@@ -54,7 +57,6 @@ call plug#end()
 " -----------------------
 " Plugins configuration
 " -----------------------
-
 " UI
 
 let g:lightline = {
@@ -71,6 +73,17 @@ autocmd VimEnter * NERDTree
 " -----------------------
 " General settings
 " -----------------------
+
+" Remap leader key to Spac
+let mapleader = "\<Space>"
+
+" Search
+nmap <silent> <Leader>s :execute 'FindUnderCursor'<CR>
+vmap <silent> <Leader>s :call FindText()<CR>
+
+" Toggle NERDTree
+nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <leader>F :NERDTreeFind<CR>
 
 " Set colour scheme
 set background=dark
@@ -118,16 +131,27 @@ set hlsearch
 " Incremental search
 set incsearch
 
+" Seeing is believing - When replacing text, show the result as you type,
+" before confirming!
+set inccommand=nosplit
+
 " Case-insensitive searching
 set ignorecase
 
 " Use case-sensitive searching if expression contains capital letter
 set smartcase
 
+" Fixes colours for neovim + Nord
+set termguicolors
+
+" Kill those swap files, it's 2020!
+set noswapfile
+
 " Maps Ctrl+P to :FZF
 map <C-P> :FZF<CR>
 
-set termguicolors
+" Highlighted text is now searchable
+vmap <silent> <Leader>s :call FindText()<CR>
 " -----------------------
 " How to restart
 " -----------------------
