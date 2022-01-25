@@ -133,7 +133,7 @@ set incsearch
 
 " Seeing is believing - When replacing text, show the result as you type,
 " before confirming!
-set inccommand=nosplit
+" set inccommand=nosplit
 
 " Case-insensitive searching
 set ignorecase

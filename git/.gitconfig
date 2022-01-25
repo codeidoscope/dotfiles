@@ -4,4 +4,6 @@
 	email = EMAIL
 
 [alias]
+  l = !git ll -20
   tree = log --graph --all --pretty=format:'%C(magenta)%h%C(auto)%d %C(white)%s %C(green)(%cr) %C(bold blue)%an%C(white)/%C(cyan)%cn'
+  ll  = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short

@@ -5,12 +5,7 @@ eval "$(rbenv init -)"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/marion/.oh-my-zsh"
 
-# VULKAN
-VULKAN_SDK=$HOME/vulkan_sdk/macOS
-PATH=$VULKAN_SDK/bin:$PATH
-DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
-VK_ICD_FILENAMES=$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json
-VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d
+export RIPGREP_CONFIG_PATH=~/.ripgrep
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -118,5 +113,6 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nv="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 source $HOME/.zshenv
+export PATH="/usr/local/sbin:$PATH"
+export BAT_CONFIG_PATH=~/.bat
